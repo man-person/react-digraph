@@ -122,6 +122,7 @@ declare module 'react-digraph' {
     showGraphControls?: boolean;
     zoomDelay?: number;
     zoomDur?: number;
+    canDragNode?: (nodeId: string) => boolean;
     canCreateEdge?: (startNode?: INode, endNode?: INode) => boolean;
     canDeleteEdge?: (selected: any) => boolean;
     canDeleteNode?: (selected: any) => boolean;
@@ -143,6 +144,7 @@ declare module 'react-digraph' {
     onSelectEdge?: (selectedEdge: IEdge) => void;
     onSelectNode?: (node: INode | null, event: any) => void;
     onSwapEdge?: (sourceNode: INode, targetNode: INode, edge: IEdge) => void;
+    onMoveNode?: (node: INode) => void;
     onUndo?: () => void;
     onUpdateNode?: (node: INode) => void;
     renderBackground?: (gridSize?: number) => any;
